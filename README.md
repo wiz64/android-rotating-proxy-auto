@@ -1,2 +1,6 @@
 # android-rotating-proxy-auto
-Use your own 5G/LTE/3G Mobile to setup up a rotating proxy server
+Created this as a part of a simple personal project for some blockchain automation
+
+### Using
+- Automate mobile app (module source coming soon)
+- Middleware API - express
