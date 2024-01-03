@@ -2,21 +2,27 @@ const express = require('express');
 const app = express();
 var sData = "ok";
 app.get('/', function(req, res) {
+    res.set('Access-Control-Allow-Origin',"*")
      res.send(sData);
     });
 app.get('/ask', function(req,res) {
+    res.set('Access-Control-Allow-Origin',"*")
     sData = 'asked';
     res.send(sData);
 });
 app.get('/grant',function(req,res) {
+    res.set('Access-Control-Allow-Origin',"*")
     sData = 'granted';
     res.send(sData)
 });
 app.get('/accept',function(req,res) {
+    res.set('Access-Control-Allow-Origin',"*")
     sData = 'accepted';
     res.send(sData)
 });
 app.get('/ok',function(req,res) {
+    res.set('Access-Control-Allow-Origin',"*")
+
     sData = 'ok';
     res.send(sData)
 });
@@ -24,6 +30,8 @@ var ids = {};
 var lastHit = {};
 var locks = {};
 app.get('/:id/:action',function(req,res) {
+    res.set('Access-Control-Allow-Origin',"*")
+
     let id = req.params.id;
     if(!ids[id]) {
         ids[id] = "ok";
